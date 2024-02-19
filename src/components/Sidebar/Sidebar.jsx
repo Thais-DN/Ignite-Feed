@@ -17,7 +17,7 @@ export function Sidebar() {
                     alt="foto de perfil"
                 />
                 <strong>Thais Dias</strong>
-                <span>Web Developer</span>
+                <span>Student</span>
             </div>
 
             <footer>
