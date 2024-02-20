@@ -31,7 +31,7 @@ const post = [
             role: "FullStack",
         },
         content: [
-            { type: "paragraph", content: "Fala galeraa 👋" },
+            { type: "paragraph", content: "Eai pessoal!" },
             {
                 type: "paragraph",
                 content:
