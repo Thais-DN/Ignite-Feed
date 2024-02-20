@@ -17,6 +17,6 @@ O Ignite Feed é uma aplicação web simples de "rede social".
 
 ## Demo
 
-(https://github.com/Thais-DN/Ignite-Feed/blob/master/src/assets/feed.png)
+<img src="https://github.com/Thais-DN/Ignite-Feed/blob/master/src/assets/feed.png">
 
-<!-- Confira você mesmo: [Ignite-Feed]() -->
+<!-- Confira você mesmo: [Ignite-Feed](link) -->
