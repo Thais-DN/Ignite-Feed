@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from "./Avatar.module.css";
 
 export function Avatar({ hasBorder = true, src }) {
@@ -5,6 +6,12 @@ export function Avatar({ hasBorder = true, src }) {
         <img
             className={hasBorder ? styles.avatarWithBorder : styles.avatar}
             src={src}
+            alt="Avatar"
         />
     );
 }
+
+Avatar.propTypes = {
+    hasBorder: PropTypes.bool, 
+    src: PropTypes.string.isRequired, 
+};

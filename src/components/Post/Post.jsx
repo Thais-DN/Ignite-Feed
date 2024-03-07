@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Post.module.css";
+
+import PropTypes from "prop-types";
 
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
@@ -117,3 +119,18 @@ export function Post({ author, publishedAt, content }) {
         </article>
     );
 }
+
+Post.propTypes = {
+    author: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        avatarUrl: PropTypes.string.isRequired,
+    }).isRequired,
+    publishedAt: PropTypes.instanceOf(Date).isRequired,
+    content: PropTypes.arrayOf(
+        PropTypes.shape({
+            type: PropTypes.oneOf(["paragraph", "link"]).isRequired,
+            content: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
