@@ -4,7 +4,7 @@ import { Avatar } from "../Avatar/Avatar";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-export function Comment({ content, onDeleteComment }) {
+export default function Comment({ content, onDeleteComment }) {
     const [likeCount, setLikeCount] = useState(0);
 
     function handleDeleteComment() {
