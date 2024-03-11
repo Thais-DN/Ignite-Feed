@@ -2,10 +2,9 @@ import { useState } from "react";
 import styles from "./Post.module.css";
 
 import PropTypes from "prop-types";
-
+import { Comment } from "../Comment/Comment";
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
-import { Comment } from "../Comment/Comment";
 import { Avatar } from "../Avatar/Avatar";
 
 export function Post({ author, publishedAt, content }) {
