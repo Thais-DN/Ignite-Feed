@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./Post.module.css";
 
 import PropTypes from "prop-types";
-import { Comment } from "../Comment/Comment";
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { Avatar } from "../Avatar/Avatar";
@@ -41,13 +40,13 @@ export function Post({ author, publishedAt, content }) {
         event.target.setCustomValidity("Esse campo é obrigatório!");
     }
 
-    function deleteComment(commentToDelete) {
-        const commentsWithoutDeletedOne = comments.filter((comment) => {
-            return comment != commentToDelete;
-        });
+    // function deleteComment(commentToDelete) {
+    //     const commentsWithoutDeletedOne = comments.filter((comment) => {
+    //         return comment != commentToDelete;
+    //     });
 
-        setComments(commentsWithoutDeletedOne);
-    }
+    //     setComments(commentsWithoutDeletedOne);
+    // }
 
     const isNewCommentEmpty = newCommentText.length == 0;
 
@@ -104,7 +103,7 @@ export function Post({ author, publishedAt, content }) {
                 </footer>
             </form>
 
-            <div className={styles.commentList}>
+            {/* <div className={styles.commentList}>
                 {comments.map((comments) => {
                     return (
                         <Comment
@@ -114,7 +113,7 @@ export function Post({ author, publishedAt, content }) {
                         />
                     );
                 })}
-            </div>
+            </div> */}
         </article>
     );
 }

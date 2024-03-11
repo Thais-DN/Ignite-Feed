@@ -15,11 +15,6 @@ export function Comment({ content, onDeleteComment }) {
         setLikeCount(likeCount + 1);
     }
 
-    Comment.propTypes = {
-        content: PropTypes.string.isRequired,
-        onDeleteComment: PropTypes.func.isRequired,
-    };
-
     return (
         <div className={styles.comment}>
             <Avatar hasBorder={false} src="https://github.com/Thais-DN.png" />
@@ -55,3 +50,8 @@ export function Comment({ content, onDeleteComment }) {
         </div>
     );
 }
+
+Comment.propTypes = {
+    content: PropTypes.string.isRequired,
+    onDeleteComment: PropTypes.func.isRequired,
+};
